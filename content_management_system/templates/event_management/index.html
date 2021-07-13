@@ -1,3 +1,4 @@
+{%load static %}
 <!DOCTYPE html>
 <html>
 
@@ -5,14 +6,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - Events Now</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{%static '/assets/bootstrap/css/bootstrap.min.css'%}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/Article-List.css">
-    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
-    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="{%static '/assets/css/Article-List.css'%}">
+    <link rel="stylesheet" href="{%static '/assets/css/Contact-Form-Clean.css'%}">
+    <link rel="stylesheet" href="{%static '/assets/css/Footer-Basic.css'%}">
 </head>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="56">
@@ -20,26 +21,29 @@
         <div class="container"><a class="navbar-brand" href="#page-top" style="font-weight: bold;font-size: 25px;">Events Now</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler float-end" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto" style="font-weight: bold;">
-                    <li class="nav-item"><a class="nav-link" href="#download" style="font-size: 19px;">aBOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#download" style="font-size: 19px;">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#features" style="font-size: 19px;">EVENTS</a></li>
                     <li class="nav-item"></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact" style="font-size: 19px;">Contact</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#contact" style="font-size: 19px;">Contact</a></li> -->
                 </ul>
             </div>
         </div>
     </nav>
-    <header class="masthead" style="background: url(&quot;assets/img/PUBG-mobile-1.jpg&quot;) top / cover no-repeat;">
+    <header class="masthead" style="background: url(&quot;static/assets/img/PUBG-mobile-1.jpg&quot;) top / cover no-repeat;">
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-lg-7 my-auto">
                     <div class="header-content">
-                        <h1 class="mb-5" style="background: rgba(0,0,0,0.81);padding: 30px;">PUBG Tournament&nbsp; cash price 2000k</h1><a class="btn btn-outline-warning text-end d-xl-flex justify-content-xl-center align-items-xl-end btn-xl" role="button" href="#download" style="padding: 16px 60px;width: 50%;text-align: right;">REGISTER NOW</a>
+                        <h1 class="mb-5" style="background: rgba(0,0,0,0.81);padding: 30px;">
+                            PUBG Tournament&nbsp; cash price 2000k
+                        </h1>
+                            <a class="btn btn-outline-warning text-end d-xl-flex justify-content-xl-center align-items-xl-end btn-xl" role="button" href="#download" style="padding: 16px 60px;width: 50%;text-align: right;">REGISTER NOW</a>
                     </div>
                 </div>
                 <div class="col-lg-5 my-auto">
                     <div class="device-container">
                         <div class="device-mockup iphone6_plus portrait white">
-                            <div class="device" style="background: url(&quot;assets/img/PUBG-mobile-1.jpg&quot;) center / cover no-repeat;">
+                            <div class="device" style="background: url(&quot;static/assets/img/PUBG-mobile-1.jpg&quot;) center / cover no-repeat;">
                                 <div class="screen"></div>
                                 <div class="button"></div>
                             </div>
@@ -69,52 +73,52 @@
                         <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
                     </div>
                     <div class="row text-start articles">
-                        <div class="col-sm-6 col-md-4 text-start item"><a href="#"><img class="img-fluid" src="assets/img/PUBG-mobile-1.jpg"></a>
+                        <div class="col-sm-6 col-md-4 text-start item"><a href="#"><img class="img-fluid" src="static/assets/img/PUBG-mobile-1.jpg"></a>
                             <h3 class="name">Article Title</h3>
                             <p class="text-start description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
                             <p class="description">Date: 2021-08-09</p><a class="action" href="#"><i class="fa fa-arrow-circle-right"></i></a>
                         </div>
-                        <div class="col-sm-6 col-md-4 text-start item"><a href="#"><img class="img-fluid" src="assets/img/PUBG-mobile-1.jpg"></a>
+                        <div class="col-sm-6 col-md-4 text-start item"><a href="#"><img class="img-fluid" src="static/assets/img/PUBG-mobile-1.jpg"></a>
                             <h3 class="name">Article Title</h3>
                             <p class="text-start description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
                             <p class="description">Date: 2021-08-09</p><a class="action" href="#"><i class="fa fa-arrow-circle-right"></i></a>
                         </div>
-                        <div class="col-sm-6 col-md-4 text-start item"><a href="#"><img class="img-fluid" src="assets/img/PUBG-mobile-1.jpg"></a>
+                        <div class="col-sm-6 col-md-4 text-start item"><a href="#"><img class="img-fluid" src="static/assets/img/PUBG-mobile-1.jpg"></a>
                             <h3 class="name">Article Title</h3>
                             <p class="text-start description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
                             <p class="description">Date: 2021-08-09</p><a class="action" href="#"><i class="fa fa-arrow-circle-right"></i></a>
                         </div>
-                        <div class="col-sm-6 col-md-4 text-start item"><a href="#"><img class="img-fluid" src="assets/img/PUBG-mobile-1.jpg"></a>
+                        <div class="col-sm-6 col-md-4 text-start item"><a href="#"><img class="img-fluid" src="static/assets/img/PUBG-mobile-1.jpg"></a>
                             <h3 class="name">Article Title</h3>
                             <p class="text-start description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
                             <p class="description">Date: 2021-08-09</p><a class="action" href="#"><i class="fa fa-arrow-circle-right"></i></a>
                         </div>
-                        <div class="col-sm-6 col-md-4 text-start item"><a href="#"><img class="img-fluid" src="assets/img/PUBG-mobile-1.jpg"></a>
+                        <div class="col-sm-6 col-md-4 text-start item"><a href="#"><img class="img-fluid" src="static/assets/img/PUBG-mobile-1.jpg"></a>
                             <h3 class="name">Article Title</h3>
                             <p class="text-start description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
                             <p class="description">Date: 2021-08-09</p><a class="action" href="#"><i class="fa fa-arrow-circle-right"></i></a>
                         </div>
-                        <div class="col-sm-6 col-md-4 text-start item"><a href="#"><img class="img-fluid" src="assets/img/PUBG-mobile-1.jpg"></a>
+                        <div class="col-sm-6 col-md-4 text-start item"><a href="#"><img class="img-fluid" src="static/assets/img/PUBG-mobile-1.jpg"></a>
                             <h3 class="name">Article Title</h3>
                             <p class="text-start description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
                             <p class="description">Date: 2021-08-09</p><a class="action" href="#"><i class="fa fa-arrow-circle-right"></i></a>
                         </div>
-                        <div class="col-sm-6 col-md-4 text-start item"><a href="#"><img class="img-fluid" src="assets/img/PUBG-mobile-1.jpg"></a>
+                        <div class="col-sm-6 col-md-4 text-start item"><a href="#"><img class="img-fluid" src="static/assets/img/PUBG-mobile-1.jpg"></a>
                             <h3 class="name">Article Title</h3>
                             <p class="text-start description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
                             <p class="description">Date: 2021-08-09</p><a class="action" href="#"><i class="fa fa-arrow-circle-right"></i></a>
                         </div>
-                        <div class="col-sm-6 col-md-4 text-start item"><a href="#"><img class="img-fluid" src="assets/img/PUBG-mobile-1.jpg"></a>
+                        <div class="col-sm-6 col-md-4 text-start item"><a href="#"><img class="img-fluid" src="static/assets/img/PUBG-mobile-1.jpg"></a>
                             <h3 class="name">Article Title</h3>
                             <p class="text-start description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
                             <p class="description">Date: 2021-08-09</p><a class="action" href="#"><i class="fa fa-arrow-circle-right"></i></a>
                         </div>
-                        <div class="col-sm-6 col-md-4 text-start item"><a href="#"><img class="img-fluid" src="assets/img/PUBG-mobile-1.jpg"></a>
+                        <div class="col-sm-6 col-md-4 text-start item"><a href="#"><img class="img-fluid" src="static/assets/img/PUBG-mobile-1.jpg"></a>
                             <h3 class="name">Article Title</h3>
                             <p class="text-start description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
                             <p class="description">Date: 2021-08-09</p><a class="action" href="#"><i class="fa fa-arrow-circle-right"></i></a>
                         </div>
-                        <div class="col-sm-6 col-md-4 text-start item"><a href="#"><img class="img-fluid" src="assets/img/PUBG-mobile-1.jpg"></a>
+                        <div class="col-sm-6 col-md-4 text-start item"><a href="#"><img class="img-fluid" src="static/assets/img/PUBG-mobile-1.jpg"></a>
                             <h3 class="name">Article Title</h3>
                             <p class="text-start description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
                             <p class="description">Date: 2021-08-09</p><a class="action" href="#"><i class="fa fa-arrow-circle-right"></i></a>
