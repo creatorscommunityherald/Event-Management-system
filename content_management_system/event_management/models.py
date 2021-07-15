@@ -2,10 +2,23 @@ from django.db import models
 
 # models to manage events
 class Event(models.Model):
+    EVENT_CHOICE = (
+        ('upcomming','upcomming'),
+        ('completed',"completed"),
+    )
+
+    REGISTRATION_STATUS =(
+        ('open','open'),
+        ('closed','closed'),
+        ('notopen','notopen ')
+    )
+
     event_name = models.CharField(max_length=200)
-    event_date = models.DateTimeField(auto_now_add=True)
+    event_date = models.DateTimeField()
     feature_image = models.ImageField(upload_to="events")
     event_description = models.TextField()
+    event_status = models.CharField(max_length=12,choices=EVENT_CHOICE,default=EVENT_CHOICE[0][0])
+    event_registration_status = models.CharField(max_length=10,choices=REGISTRATION_STATUS,default=REGISTRATION_STATUS[0][0])
     
     def __str__(self) -> str:
         return self.event_name
@@ -44,3 +57,21 @@ class Competition_Registration(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
+class Look_and_feel(models.Model):
+    ACTIVE_CHOICE =(
+        ('c','current'),
+        ('o','off')
+    )
+
+    feature_image = models.ImageField(upload_to = "home")
+    promo_event = models.ForeignKey(Event,null=True,on_delete=models.CASCADE, related_name="events")
+    about_events_now = models.TextField()
+    quote_events_now = models.CharField(max_length=200)
+    active_status = models.CharField(max_length=1,choices=ACTIVE_CHOICE,default=ACTIVE_CHOICE[1][0])
+
+    class Meta:
+        db_table = 'Events_Now'
+
+    def __str__(self) -> str:
+        return "{0} {1}".format("events_now",self.active_status)
