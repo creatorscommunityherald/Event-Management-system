@@ -38,12 +38,19 @@ class Registration(models.Model):
 
 
 class Competition(models.Model):
+    REGISTRATION_STATUS =(
+        ('open','open'),
+        ('closed','closed'),
+        ('notopen','notopen ')
+    )
+
     name = models.CharField(max_length=200)
-    competition_date = models.DateTimeField(auto_now_add=True)
+    competition_date = models.DateTimeField()
     feature_image = models.ImageField(upload_to = "Competitions")
     competition_description = models.TextField()
     winner_price = models.CharField(max_length=100)
     runner_up_price = models.CharField(max_length=100)
+    competition_registration_status = models.CharField(max_length=10,choices=REGISTRATION_STATUS,default=REGISTRATION_STATUS[0][0])
 
     def __str__(self) -> str:
         return self.name

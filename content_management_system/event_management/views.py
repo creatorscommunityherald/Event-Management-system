@@ -3,6 +3,7 @@ from django.shortcuts import render
 
 from .models import (
     Event,
+    Competition,
     Look_and_feel,
     Registration
 )
@@ -12,9 +13,8 @@ from .Forms import Event_Registration
 def index(request):
     look = Look_and_feel.objects.get(active_status = 'c')
     events = Event.objects.filter(event_status = 'upcomming') #GET EVENT OBJECT  
-    print(look)
-   
-    return render(request,"event_management/index.html",{'events': events,'look': look})  #SEND OBJECT
+    competition = Competition.objects.all()
+    return render(request,"event_management/index.html",{'events': events,'look': look,'competition':competition})  #SEND OBJECT
 
 def events(request,event_id):
     # Get model
@@ -24,6 +24,19 @@ def events(request,event_id):
         if events:
             form = Event_Registration()
             return render(request,"event_management/Register.html",{'event':event,'form':form})
+
+    #query model
+    #send result
+    return Http404
+
+def competition(request,event_id):
+    # Get model
+    if event_id:
+        competition = Competition.objects.get(id = event_id)
+        
+        if competition:
+            form = Event_Registration()
+            return render(request,"event_management/competition.html",{'competition':competition,'form':form})
 
     #query model
     #send result

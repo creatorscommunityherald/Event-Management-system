@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Register for an event</title>
+    <title>Register for an competition</title>
 
 
 
@@ -27,14 +27,14 @@
             <div class="col-md-12 d-xl-flex justify-content-xl-start"><a class="btn btn-outline-warning text-end d-flex d-xl-flex justify-content-sm-center justify-content-xl-center align-items-xl-center btn-xl" role="button" href="javascript:history.go(-1)" style="width: 7%;text-align: right;background: #000000;">Back</a></div>
         </div>
         <div class="row g-0" style="margin-top: 20px;">
-            <div class="col-md-6 text-center"><img src="{{event.feature_image.url}}" width="50%" loading="eager"></div>
+            <div class="col-md-6 text-center"><img src="{{competition.feature_image.url}}" width="50%" loading="eager"></div>
             <div class="col-md-6">
                 <p style="padding: 36px;width: 100%;">
-                    {{event.event_description}}    
+                    {{competition.competition_description}}    
                 </p>
                 <div style="text-align: left;padding: 34px;width: 100%;">
-                    <p>Date: {{event.event_date}}</p>
-                    <p>Registration is {{event.event_registration_status}}</p>
+                    <p>Date: {{competition.competition_date}}</p>
+                    <p>Registration is {{competition.competition_registration_status}}</p>
                 </div>
             </div>
         </div>
@@ -46,8 +46,8 @@
 {% if registration %}
 <h2 class="text-center">Registration</h2>
 {%else%}
-        {% if event.event_registration_status == "open"%}
-        <form method="post" action="{{event.id}}/registration">
+        {% if competition.competition_registration_status == "open"%}
+        <form method="post" action="{{competition.id}}/competition_registration">
             {% csrf_token %}
             <h2 class="text-center">Register</h2>
             <div class="mb-3">
@@ -61,7 +61,7 @@
             <div class="d-flex justify-content-sm-center mb-3">
                 <button class="btn btn-outline-warning text-end d-sm-flex justify-content-sm-center btn-xl" type="submit" style="padding: 16px 60px;text-align: right;color: rgb(0,0,0);background: #ffffff;border-width: 2px;border-style: solid;transform: scale(0.90);">submit</button></div>
         </form>
-        {% elif event.registration_status == "closed" %}
+        {% elif competition.registration_status == "closed" %}
             <p class="text-center">Registration is closed</p>
             {%else%}
             <p class="text-center">Registration is not yet open</p>
