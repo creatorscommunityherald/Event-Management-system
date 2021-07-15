@@ -29,6 +29,7 @@
         <div class="row g-0" style="margin-top: 20px;">
             <div class="col-md-6 text-center"><img src="{{event.feature_image.url}}" width="50%" loading="eager"></div>
             <div class="col-md-6">
+                <h3 class="name">Event: {{event.event_name}}</h3>
                 <p style="padding: 36px;width: 100%;">
                     {{event.event_description}}    
                 </p>
@@ -44,7 +45,7 @@
 
         <!-- check for registraton -->
 {% if registration %}
-<h2 class="text-center">Registration</h2>
+<h2 class="text-center">Registration Done</h2>
 {%else%}
         {% if event.event_registration_status == "open"%}
         <form method="post" action="{{event.id}}/registration">

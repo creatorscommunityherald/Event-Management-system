@@ -29,10 +29,17 @@
         <div class="row g-0" style="margin-top: 20px;">
             <div class="col-md-6 text-center"><img src="{{competition.feature_image.url}}" width="50%" loading="eager"></div>
             <div class="col-md-6">
-                <p style="padding: 36px;width: 100%;">
+                <h3 class="name">Competition: {{competition.name}}</h3>
+                <p style="width: 100%;">
                     {{competition.competition_description}}    
                 </p>
-                <div style="text-align: left;padding: 34px;width: 100%;">
+                <p style="padding-top: 21px;width: 100%;">
+                   Winner Price:  {{competition.winner_price}}    
+                </p>
+                <p style="width: 100%;">
+                   Runner up price: {{competition.runner_up_price}}    
+                </p>
+                <div style="text-align: left;width: 100%;">
                     <p>Date: {{competition.competition_date}}</p>
                     <p>Registration is {{competition.competition_registration_status}}</p>
                 </div>
@@ -44,7 +51,7 @@
 
         <!-- check for registraton -->
 {% if registration %}
-<h2 class="text-center">Registration</h2>
+<h2 class="text-center">Registration Completed </h2>
 {%else%}
         {% if competition.competition_registration_status == "open"%}
         <form method="post" action="{{competition.id}}/competition_registration">

@@ -78,7 +78,7 @@ class Look_and_feel(models.Model):
     active_status = models.CharField(max_length=1,choices=ACTIVE_CHOICE,default=ACTIVE_CHOICE[1][0])
 
     class Meta:
-        db_table = 'Events_Now'
+        db_table = 'Herald Event Manager'
 
     def __str__(self) -> str:
-        return "{0} {1}".format("events_now",self.active_status)
+        return "{0} {1}".format("Herald Event Manager",self.active_status)
