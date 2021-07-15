@@ -5,14 +5,14 @@ from django.forms import ModelForm, widgets
 from .models import Registration
 
 
-class Event_Registration(ModelForm):
+class Event_Registration(forms.ModelForm):
     """
     Responsible for handlng Event Registration form
     """
     class Meta:
         model = Registration
         fields = [
-            'name','email','event','phonenumber'
+            'name','email','phonenumber'
         ]
         widgets ={
             'name': forms.TextInput(attrs={
@@ -22,9 +22,8 @@ class Event_Registration(ModelForm):
             }),
             'email': forms.TextInput(attrs={
                'placeholder':'Attendee Email',
-               'autocomplete':'off',
-                'class':'form-control',
-                'style':"margin-top: 12px"
+               'class':'form-control',
+               'style':"margin-top: 12px"
             }),
             'phonenumber':forms.TextInput(attrs={
                 'placeholder':'phonenumber',
